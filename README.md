@@ -1,593 +1,147 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("ImageLabel")
+local Login = Instance.new("TextButton")
+local Key = Instance.new("TextBox")
 local UIGradient = Instance.new("UIGradient")
-local Submit = Instance.new("TextButton")
-local Imput = Instance.new("TextBox")
 local PremiumOpen = Instance.new("TextButton")
-local Close = Instance.new("TextButton")
-local Roundify = Instance.new("ImageLabel")
-local premiummain = Instance.new("ImageLabel")
+local mainPremium = Instance.new("ImageLabel")
+local PremiumLogin = Instance.new("TextButton")
+local PremiumKey = Instance.new("TextBox")
 local UIGradient_2 = Instance.new("UIGradient")
-local PremiumSubmit = Instance.new("TextButton")
-local PremiumImput = Instance.new("TextBox")
-local PremiumClose = Instance.new("TextButton")
-local Roundify_2 = Instance.new("ImageLabel")
+
+--Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 main.Name = "main"
 main.Parent = ScreenGui
-main.AnchorPoint = Vector2.new(0.5, 0.5)
 main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 main.BackgroundTransparency = 1.000
-main.Position = UDim2.new(0.499845535, 0, 0.619944692, 0)
-main.Size = UDim2.new(0.423921257, 24, 0.364290088, 24)
+main.Position = UDim2.new(0.332083344, 0, 0.301549494, 0)
+main.Size = UDim2.new(0, 644, 0, 333)
 main.Image = "rbxassetid://3570695787"
 main.ScaleType = Enum.ScaleType.Slice
 main.SliceCenter = Rect.new(100, 100, 100, 100)
 main.SliceScale = 0.120
 
-UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
-UIGradient.Parent = main
-Submit.Name = "Submit"
-Submit.Parent = main
-Submit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Submit.BackgroundTransparency = 1.000
-Submit.BorderSizePixel = 0
-Submit.Position = UDim2.new(0.239500314, 0, 0.688054144, 0)
-Submit.Size = UDim2.new(0, 436, 0, 65)
-Submit.Font = Enum.Font.SourceSans
-Submit.Text = "Login"
-Submit.TextColor3 = Color3.fromRGB(0, 0, 0)
-Submit.TextSize = 40.000
+Login.Name = "Login"
+Login.Parent = main
+Login.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Login.BackgroundTransparency = 1.000
+Login.Position = UDim2.new(0.344297022, 0, 0.668410301, 0)
+Login.Size = UDim2.new(0, 200, 0, 50)
+Login.Font = Enum.Font.SourceSans
+Login.Text = "Login"
+Login.TextColor3 = Color3.fromRGB(0, 0, 0)
+Login.TextSize = 40.000
 
-Imput.Name = "Imput"
-Imput.Parent = main
-Imput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Imput.BackgroundTransparency = 1.000
-Imput.BorderSizePixel = 0
-Imput.Position = UDim2.new(0.239641532, 0, 0.347450197, 0)
-Imput.Size = UDim2.new(0, 437, 0, 78)
-Imput.Font = Enum.Font.SourceSans
-Imput.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-Imput.PlaceholderText = "Key"
-Imput.Text = ""
-Imput.TextColor3 = Color3.fromRGB(0, 0, 0)
-Imput.TextSize = 40.000
+Key.Name = "Key"
+Key.Parent = main
+Key.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Key.BackgroundTransparency = 1.000
+Key.Position = UDim2.new(0.258893222, 0, 0.32432431, 0)
+Key.Size = UDim2.new(0, 310, 0, 71)
+Key.Font = Enum.Font.SourceSans
+Key.PlaceholderText = "Key"
+Key.Text = ""
+Key.TextColor3 = Color3.fromRGB(0, 0, 0)
+Key.TextSize = 40.000
+Key.TextWrapped = true
+
+UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.14, Color3.fromRGB(82, 82, 82)), ColorSequenceKeypoint.new(0.21, Color3.fromRGB(117, 117, 117)), ColorSequenceKeypoint.new(0.29, Color3.fromRGB(120, 120, 120)), ColorSequenceKeypoint.new(0.43, Color3.fromRGB(125, 125, 125)), ColorSequenceKeypoint.new(0.49, Color3.fromRGB(122, 122, 122)), ColorSequenceKeypoint.new(0.72, Color3.fromRGB(148, 148, 148)), ColorSequenceKeypoint.new(0.84, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(0.99, Color3.fromRGB(171, 171, 171)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient.Parent = main
 
 PremiumOpen.Name = "PremiumOpen"
 PremiumOpen.Parent = main
 PremiumOpen.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PremiumOpen.BackgroundTransparency = 1.000
-PremiumOpen.Position = UDim2.new(0.380700648, 0, 0.0531891882, 0)
+PremiumOpen.Position = UDim2.new(0.344720483, 0, 0.0810810775, 0)
 PremiumOpen.Size = UDim2.new(0, 200, 0, 50)
 PremiumOpen.Font = Enum.Font.SourceSans
-PremiumOpen.Text = "Premium Key"
+PremiumOpen.Text = "PremiumOpen"
 PremiumOpen.TextColor3 = Color3.fromRGB(0, 0, 0)
+PremiumOpen.TextScaled = true
 PremiumOpen.TextSize = 40.000
-
-Close.Name = "Close"
-Close.Parent = main
-Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Close.BackgroundTransparency = 1.000
-Close.BorderSizePixel = 0
-Close.Position = UDim2.new(0.948639154, 0, 0.0182017088, 0)
-Close.Size = UDim2.new(0, 35, 0, 49)
-Close.Font = Enum.Font.SourceSans
-Close.Text = ""
-Close.TextColor3 = Color3.fromRGB(0, 0, 0)
-Close.TextSize = 14.000
-
-Roundify.Name = "Roundify"
-Roundify.Parent = Close
-Roundify.AnchorPoint = Vector2.new(0.5, 0.5)
-Roundify.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Roundify.BackgroundTransparency = 1.000
-Roundify.Position = UDim2.new(0.426391602, 0, 0.59608531, 0)
-Roundify.Size = UDim2.new(0.589722812, 24, 0.454064161, 24)
-Roundify.Image = "http://www.roblox.com/asset/?id=2307116600"
-Roundify.ScaleType = Enum.ScaleType.Slice
-Roundify.SliceCenter = Rect.new(100, 100, 100, 100)
-Roundify.SliceScale = 0.120
-
-premiummain.Name = "premiummain"
-premiummain.Parent = ScreenGui
-premiummain.AnchorPoint = Vector2.new(0.5, 0.5)
-premiummain.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-premiummain.BackgroundTransparency = 1.000
-premiummain.Position = UDim2.new(0.499947906, 0, 0.212425411, 0)
-premiummain.Size = UDim2.new(0.230729163, 24, 0.262004912, 24)
-premiummain.Image = "rbxassetid://3570695787"
-premiummain.Visible = false
-premiummain.ScaleType = Enum.ScaleType.Slice
-premiummain.SliceCenter = Rect.new(100, 100, 100, 100)
-premiummain.SliceScale = 0.120
-
-UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.30, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(0.70, Color3.fromRGB(255, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
-UIGradient_2.Parent = premiummain
-
-PremiumSubmit.Name = "PremiumSubmit"
-PremiumSubmit.Parent = premiummain
-PremiumSubmit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PremiumSubmit.BackgroundTransparency = 1.000
-PremiumSubmit.Position = UDim2.new(0.284796566, 0, 0.605134428, 0)
-PremiumSubmit.Size = UDim2.new(0, 200, 0, 64)
-PremiumSubmit.Font = Enum.Font.SourceSans
-PremiumSubmit.Text = "Login"
-PremiumSubmit.TextColor3 = Color3.fromRGB(0, 0, 0)
-PremiumSubmit.TextSize = 40.000
-
-PremiumImput.Name = "PremiumImput"
-PremiumImput.Parent = premiummain
-PremiumImput.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PremiumImput.BackgroundTransparency = 1.000
-PremiumImput.Position = UDim2.new(0.192719489, 0, 0.11483781, 0)
-PremiumImput.Size = UDim2.new(0, 287, 0, 62)
-PremiumImput.Font = Enum.Font.SourceSans
-PremiumImput.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
-PremiumImput.PlaceholderText = "Premium Key"
-PremiumImput.Text = ""
-PremiumImput.TextColor3 = Color3.fromRGB(0, 0, 0)
-PremiumImput.TextSize = 40.000
-
-PremiumClose.Name = "PremiumClose"
-PremiumClose.Parent = premiummain
-PremiumClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PremiumClose.BackgroundTransparency = 1.000
-PremiumClose.BorderSizePixel = 0
-PremiumClose.Position = UDim2.new(0.895074844, 0, 0, 0)
-PremiumClose.Size = UDim2.new(0, 49, 0, 50)
-PremiumClose.Font = Enum.Font.SourceSans
-PremiumClose.TextColor3 = Color3.fromRGB(0, 0, 0)
-PremiumClose.TextSize = 14.000
-PremiumClose.TextTransparency = 1.000
-
-Roundify_2.Name = "Roundify"
-Roundify_2.Parent = PremiumClose
-Roundify_2.AnchorPoint = Vector2.new(0.5, 0.5)
-Roundify_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Roundify_2.BackgroundTransparency = 1.000
-Roundify_2.Position = UDim2.new(0.5, 0, 0.500000179, 0)
-Roundify_2.Size = UDim2.new(0.510204077, 24, 0.52000016, 24)
-Roundify_2.Image = "http://www.roblox.com/asset/?id=2307116600"
-Roundify_2.ScaleType = Enum.ScaleType.Slice
-Roundify_2.SliceCenter = Rect.new(100, 100, 100, 100)
-Roundify_2.SliceScale = 0.120
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Submit.MouseButton1Down:connect(function()
-if Imput.Text == "TheNormalKeyIsNotSoGoodLikePremiumKeyButItsNormalXD" or
-   game.Players.LucaMichael06.Character then
-main.Visible = false
-premiummain.Visible = false
-wait(0.4)
-getgenv().LoadGui = false;
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LucaMichael06/Luca/main/README.md" ))()
-wait(1)
-getgenv().LoadGui = true;
-end
+PremiumOpen.TextWrapped = true
+
+mainPremium.Name = "mainPremium"
+mainPremium.Parent = ScreenGui
+mainPremium.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+mainPremium.BackgroundTransparency = 1.000
+mainPremium.Position = UDim2.new(0.368020833, 0, 0.0226460025, 0)
+mainPremium.Visible = false
+mainPremium.Size = UDim2.new(0, 506, 0, 217)
+mainPremium.Image = "rbxassetid://3570695787"
+mainPremium.ScaleType = Enum.ScaleType.Slice
+mainPremium.SliceCenter = Rect.new(100, 100, 100, 100)
+mainPremium.SliceScale = 0.120
+
+PremiumLogin.Name = "PremiumLogin"
+PremiumLogin.Parent = mainPremium
+PremiumLogin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PremiumLogin.BackgroundTransparency = 1.000
+PremiumLogin.Position = UDim2.new(0.302371532, 0, 0.672811031, 0)
+PremiumLogin.Size = UDim2.new(0, 200, 0, 50)
+PremiumLogin.Font = Enum.Font.SourceSans
+PremiumLogin.Text = "PremiumLogin"
+PremiumLogin.TextColor3 = Color3.fromRGB(0, 0, 0)
+PremiumLogin.TextSize = 40.000
+
+PremiumKey.Name = "PremiumKey"
+PremiumKey.Parent = mainPremium
+PremiumKey.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PremiumKey.BackgroundTransparency = 1.000
+PremiumKey.Position = UDim2.new(0.302371532, 0, 0.0552995391, 0)
+PremiumKey.Size = UDim2.new(0, 200, 0, 50)
+PremiumKey.Font = Enum.Font.SourceSans
+PremiumKey.PlaceholderText = "PremiumKey"
+PremiumKey.Text = ""
+PremiumKey.TextColor3 = Color3.fromRGB(0, 0, 0)
+PremiumKey.TextSize = 40.000
+PremiumKey.TextWrapped = true
+
+UIGradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.14, Color3.fromRGB(82, 82, 82)), ColorSequenceKeypoint.new(0.21, Color3.fromRGB(117, 117, 117)), ColorSequenceKeypoint.new(0.29, Color3.fromRGB(120, 120, 120)), ColorSequenceKeypoint.new(0.43, Color3.fromRGB(125, 125, 125)), ColorSequenceKeypoint.new(0.49, Color3.fromRGB(122, 122, 122)), ColorSequenceKeypoint.new(0.72, Color3.fromRGB(148, 148, 148)), ColorSequenceKeypoint.new(0.84, Color3.fromRGB(25, 25, 25)), ColorSequenceKeypoint.new(0.99, Color3.fromRGB(171, 171, 171)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
+UIGradient_2.Parent = mainPremium
+
+
+PremiumLogin.MouseButton1Down:connect(function()
+	if PremiumKey.text == "LucaAreSexy" or
+		game.Players.LucaMichael06.character then
+		main.Visible = false
+		mainPremium.Visible = false
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LucaMichael06/Luca/main/README.md"))()
+	end
 end)
-Submit.MouseButton1Down:connect(function()
-game.Players.Kev2345671:Kick("UR BLACKLISTED")
+PremiumLogin.MouseButton1Down:connect(function()
+	if game.Players.Maxi1230111.character then
+		main.Visible = false
+		mainPremium.Visible = false
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LucaMichael06/Luca/main/README.md"))()
+	end
 end)
-Submit.MouseButton1Down:connect(function()
-game.Players.Kinderpopo:Kick("UR BLACKLISTED")
+
+
+
+Login.MouseButton1Down:connect(function()
+	if Key.text == "LucaTheBest" or 
+		game.Players.LucaMichael06.character then
+		main.Visible = false
+		mainPremium.Visible = false
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LucaMichael06/Luca/main/README.md"))()
+	end
 end)
-Submit.MouseButton1Down:connect(function()
-if game.Players.Kev2345671.Character then
-main.Visible = false
-premiummain.Visible = false
-getgenv().LoadGui = false;
-wait(0.4)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LucaMichael06/Luca/main/README.md" ))()
-wait(1)
-getgenv().LoadGui = true;
-end
-end)
-Close.MouseButton1Down:connect(function()
-premiummain.Visible = false
-main.Visible = false
-end)
-PremiumClose.MouseButton1Down:connect(function()
-premiummain.Visible = false
-end)
-PremiumSubmit.MouseButton1Down:connect(function()
-if PremiumImput.Text == "PremiumKeyIsBetterThenNormalButItsPremiumXD" or
-   game.Players.LucaMichael06.Character then
-main.Visible = false
-premiummain.Visible = false
-getgenv().LoadGui = false;
-wait(0.4)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LucaMichael06/Luca/main/README.md" ))()
-wait(1)
-getgenv().LoadGui = true;
-end
-end)
-PremiumSubmit.MouseButton1Down:connect(function()
-game.Players.Kinderpopo:Kick("UR BLACKLISTED")
-end)
-PremiumSubmit.MouseButton1Down:connect(function()
-if game.Players.Kev2345671.Character then
-main.Visible = false
-premiummain.Visible = false
-getgenv().LoadGui = false;
-wait(0.4)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LucaMichael06/Luca/main/README.md" ))()
-wait(1)
-getgenv().LoadGui = true;
-end
+Login.MouseButton1Down:connect(function()
+	if game.Players.Maxi1230111.character then
+		main.Visible = false
+		mainPremium.Visible = false
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LucaMichael06/Luca/main/README.md"))()
+	end
 end)
 PremiumOpen.MouseButton1Down:connect(function()
-premiummain.Visible = true;
+	mainPremium.Visible = true
 end)
